@@ -1,0 +1,6 @@
+[nltk_data]
+punkt
+stopwords
+
+[spacy_model]
+en_core_web_sm
