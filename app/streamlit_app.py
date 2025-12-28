@@ -7,6 +7,14 @@ import streamlit as st
 import sys
 import os
 
+# Download spaCy model if not available
+try:
+    import spacy
+    spacy.load('en_core_web_sm')
+except:
+    import subprocess
+    subprocess.run(['python', '-m', 'spacy', 'download', 'en_core_web_sm'], check=False)
+
 # Add src directory to path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
